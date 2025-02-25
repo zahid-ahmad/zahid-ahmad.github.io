@@ -54,13 +54,48 @@
         <div class="overlay"></div>
         <div class="header-content container">
             <h1 class="header-title">
-                <span class="up">HI!</span>
-                <span class="down">I am <br> Zahid Ahmad</span>
-            </h1>
-            <p class="header-subtitle">MACHINE LEARNING ENGINEER</p>            
+    <span class="up">Hello, I'm</span>
+    <span class="down">Zahid Ahmad</span>
+</h1>
+<p class="header-subtitle">Machine Learning Engineer | AI Enthusiast</p>
+<p class="header-description">
+    <span id="typed-text"></span>
+</p>
+<button class="btn btn-primary" onclick="window.location.href='https://github.com/zahid-ahmad/'">Explore My Work</button>
 
-            <button class="btn btn-primary" onclick="window.location.href='https://github.com/zahid-ahmad/'">Visit My Works</button>
-        </div>              
+<script>
+    const typedTextSpan = document.getElementById("typed-text");
+    const textArray = ["Transforming data into intelligent solutions.", "Building AI models that make an impact.", "Solving complex problems with innovation."];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < textArray[textIndex].length) {
+            typedTextSpan.textContent += textArray[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 50);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typedTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 30);
+        } else {
+            textIndex++;
+            if (textIndex >= textArray.length) textIndex = 0;
+            setTimeout(type, 1000);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(type, 1000);
+    });
+</script>
+	</div>              
     </header><!-- end of page header -->
 
     <!-- about section -->
