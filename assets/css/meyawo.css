@@ -12104,7 +12104,7 @@ pre .code {
 
 .header .header-content .header-subtitle {
   font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1300 - 300)));
-  letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
+  letter-spacing: calc(0.1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
   opacity: .8;
   margin-top: -10px;
   margin-bottom: 20px;
@@ -12231,4 +12231,96 @@ pre .code {
 
 .section-lg {
   padding: 100px 0 !important;
+}
+
+/* Services Section Styling */
+.service-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-holder {
+  font-size: 2.5rem;
+  color: #007bff; /* Primary color */
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+/* Portfolio Section Styling */
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-card-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.portfolio-card:hover .portfolio-card-overlay {
+    opacity: 1;
+}
+
+.portfolio-card:hover .portfolio-card-img {
+    transform: scale(1.1);
+}
+
+.portfolio-card-caption {
+    max-width: 80%;
+}
+
+.portfolio-card-caption h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-card-caption p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card-caption .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
 }
